@@ -1,0 +1,196 @@
+@font-face {
+    font-family: Tanha;
+    src: url('./font/Tanha.eot');
+    src: url('./font/Tanha.eot?iefix') format('embedded-opentype'),
+         url('./font/Tanha.woff') format('woff'),
+         url('./font/Tanha.ttf') format('truetype');
+    font-weight: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tanha;
+    direction: rtl;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --dark-color: #252525;
+    --white-color: #fff;
+    --light-gray-color: #f2f2f2;
+
+    --site-max-width: 1300px;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--primary-color);
+}
+nav{
+    display: flex; /*! برای این که محتوا بیاد کنار همدیگه !*/
+    padding: 15px 0 15px 20px;
+    justify-content: space-between; /*! برای این که بین محتوا فاصله بندازیم !*/
+    align-items: center;
+    margin: auto;
+    max-width: var(--site-max-width);
+}
+
+nav .nav-logo a{
+    display: flex;/*! برای این که نوشته ی هدر بیاد کنار لوگو !*/
+    gap: 15px;
+    align-items: center;
+}
+
+nav .nav-logo a img{
+    max-width: 55px;
+}
+nav .nav-logo a h2{
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a{
+    display: block;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white-color);
+    border-radius: 30px;
+    transition: all 300ms ease;
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+
+label .btn-menu,
+label .btn-close{
+    display: none;
+}
+
+
+.hero-section{
+    background-color: var(--primary-color);
+    min-height: 100vh;
+}
+.hero-section .section-container{
+    padding: 200px 275px 0px ;
+}
+.hero-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 85px;
+    align-items: center; /*! برای این که محتوا وسط قرار بگیره !*/
+    justify-content: space-between;
+}
+.text-section h2{
+    color: var(--secondary-color);
+    font-size: 40px;
+}
+.text-section h3{
+    color: var(--white-color);
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.text-section p{
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 24px 0 48px;
+    max-width: 70%;
+}
+.hero-section-btn{
+    display: flex;
+    gap: 24px;
+}
+.hero-section-btn .button{
+    padding: 8px 28px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    color: var(--dark-color);
+}
+
+.hero-section-btn .button:last-child{
+    background: none;
+    color: var(--white-color);
+    border-color: var(--white-color);
+}
+.hero-section-btn .button:last-child:hover{
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    border-color: transparent;
+}
+.hero-section-btn .button:first-child:hover{
+    background: none;
+    color: var(--white-color);
+    border-color: var(--white-color);
+}
+
+.image-section{
+    max-width: 45%;
+}
+
+.image-section img{
+    max-width: 100%;
+}
+
+.about-section{
+    background-color: var(--light-gray-color);
+    padding: 60px 20px 120px;
+}
+
+
+.about-container{
+    display:flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-about{
+    max-width: 50%;
+}
+.text-about h2{
+    text-align: center;
+    padding: 60px 0 100px;
+    font-size: 32px;
+    font-family: "Righteous", sans-serif;
+    text-transform: uppercase;
+}
+.text-about p{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: center;
+}
+.about-section .section-container{
+    padding: 0 250px;
+}
+
