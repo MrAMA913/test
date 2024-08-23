@@ -1,0 +1,334 @@
+@font-face {
+    font-family: Dorna;
+    src: url('./fonts/Dorna/Dorna\ Bold.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: SefidRoud;
+
+    src: url('./fonts/SefidRoud/Sefid\ Roud.eot');
+    src: url('./fonts/SefidRoud/Sefid\ Roud.eot?#iefix') format('embedded-opentype'),
+            url('./fonts/SefidRoud/Sefid\ Roud.woff') format('woff'),
+            url('./fonts/SefidRoud/Sefid\ Roud.ttf') format('truetype');
+    font-weight: normal;
+
+}
+:root {
+    --text: #080209;
+    --background: #fdf6fd;
+    --primary: #b2a75f;
+    --secondary: #e89293;
+    --accent: #df9966;
+    
+    
+    --max-width:1300px;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Dorna; 
+    direction: rtl;
+    font-size: 16px;
+    color: var(--text);
+    list-style: none;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background);
+    
+}
+
+main{
+    height: 1400px;
+    background: url("./images/Designer.png")  repeat-y scroll;
+    background-size: 100% 100%;
+}
+a{
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: #b2a75fbb;
+}
+
+nav {
+    display: flex;
+    padding: 15px 0 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+nav .logo a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+nav .logo a h2{
+    font-family: SefidRoud;
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--text);
+}
+nav .logo a img{
+    max-width: 64px;
+    
+}
+nav i{
+    color: var(--text);
+}
+nav .close_btn,
+nav .menu_btn {
+    display: none;
+}
+
+#click{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+}
+
+.section_container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.section_menu{
+    height: 95vh;
+}
+
+.container{
+    padding-top: 120px;
+}
+.section_menu .menu{
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 10px  40px 10px #000000;
+}
+
+.section_menu .menu .item{
+    width: 90%;
+    padding: 15px 20px;
+    border-radius: 16px;
+}
+.section_menu .menu .item h2,
+.section_menu .menu .item .text p,
+.section_menu .menu .item .text span{
+    color: var(--background);
+}
+
+.section_menu .menu .item .text p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+.section_menu .menu .item .text span{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.section_menu .menu .item .cat_container .cat{
+    display: flex;
+    justify-content: space-between;
+
+}
+.section_menu .menu .item .cat_container .cat li h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.section_menu .menu .item .cat_container .cat li .active{
+    background-color: #b2a75f66;
+    box-shadow: 5px 5px 20px 1px #000000;
+    margin-top: -5px;
+
+}
+
+.section_menu .menu .item .cat_container .cat li h2:hover{
+    background-color: #b2a75f66;
+    box-shadow: 5px 10px 20px 5px #000000;
+    margin-top: -5px;
+}
+.section_menu .menu .item .cat_container .cat li h2:active{
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.section_menu .menu .item .list{
+    padding: 0 20px 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.section_menu .menu .item .list li{
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 15px 5px 0px;
+    background-color: #080209;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+
+
+/**   quantity item start   **/
+.quantity-counter {
+    width: 150px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+}
+.quantity-counter input {
+    width: 50px;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: var(--accent);
+    color: var(--background);
+    appearance: none;
+    outline: 0;
+    border-radius: 16px;
+
+}
+.quantity-counter span {
+    display: block;
+    font-size: 25px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--accent);
+    user-select: none;
+}
+
+
+/**   quantity item end   **/
+
+.submit button{
+    position: fixed;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 50px 50px;
+    border-radius: 32px;
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submit :hover{
+    bottom: -30px;
+}
+
+
+
+
+
+
+@media(max-width: 1024px) {
+    nav{
+        padding: 15px 20px;
+    }
+    nav .menu_btn{
+        display: block;
+        font-size: 48px;
+    }
+
+    nav ul {
+        display: block;
+        background: var(--background);
+        position: absolute;
+        top: 95px;
+        left: -100%;
+        overflow-y: a uto;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    #click:checked ~ nav .menu_btn{
+        display: none;
+    }
+    #click:checked ~ nav .close_btn{
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 8px 12px;
+        width: 48%;
+        margin: 24px auto;
+    }
+
+    nav ul li a {
+        color: var(--text);
+
+
+    }
+
+}
+
+@media(max-width: 768px){
+
+}
+@media(max-width: 480px){
+    nav{
+        padding: none;
+    }
+    nav .logo a h2{
+        font-family: SefidRoud;
+        font-size: 36px;
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .submit button{
+        font-size: 16px;
+    }
+    main{
+        height: 1400px;
+        background: linear-gradient(120deg, #ba694e 0%, #83a326 30%, #cac412 50%, #981a11 100%);
+        background-size: 100% 100%;
+    }
+
+}
