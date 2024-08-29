@@ -61,7 +61,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1;
-    background: #b2a75fbb;
+    background: #ed8a18cb;
 }
 
 nav {
@@ -182,7 +182,7 @@ nav ul {
 
 .section_menu .menu .item .list{
     padding: 0 20px 10px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
@@ -198,7 +198,7 @@ nav ul {
     padding: 10px 15px 5px 0px;
     background-color: #080209;
     border-radius: 8px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
 }
 
 
@@ -312,17 +312,31 @@ nav ul {
     .section_container .container .menu .item .list li{
         width: 100%;
     }
+    .section_container .menu .item .cat_container .cat {
+        display: none;
+    }
+    main{
+        background: #f5bd06;
+        height: 1400px;
+        background-size: 100vh 100vh;
+    }
+    .section_menu .section_container .container .menu{
+        position: absolute;
+        background: #f5bd06;
+        background-image: url("./images/design.png") ;
+        background-repeat: no-repeat;
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center center;
+        padding-bottom: 50px ;
+    }
 }
 
-@media(max-width: 768px){
 
-
-}
 @media(max-width: 480px){
 
-    header{
-        background-color: #ed8a18bb;
-    }
+
     nav{
         padding: none;
 
@@ -340,9 +354,7 @@ nav ul {
         position: fixed;
         
     }
-    .section_container .menu .item .cat_container .cat {
-        display: none;
-    }
+
     .section_container .menu{
         width: 100%;
         padding: 0;
@@ -354,33 +366,17 @@ nav ul {
     .section_container .menu .item .list{
         width: 100%;
     }
-    /* .section_menu .menu .item .cat_container ul li{
-        display: inline-block;
-    }
-    .section_menu .menu .item .cat_container .cat li h2{
-        font-size: 82%;
-    } */
+
     .section_menu .menu .item .list li .text p{
         font-size: 14px;
         
     }
+    .section_menu .menu .item .list li .text span{
+        font-size: 12px;
+        
+    }
 
-    main{
-        background: #f5bd06;
-        height: 1400px;
-        background-size: 100vh 100vh;
-    }
-    .section_menu .section_container .container .menu{
-        position: absolute;
-        background: #f5bd06;
-        background-image: url("./images/design.png") ;
-        background-repeat: no-repeat;
-        background-size:100vw auto;
-        background-position: center;
-        background-attachment: fixed;
-        background-position: center center;
-        padding-bottom: 50px ;
-    }
+
     /**   quantity item start   **/
     .quantity-counter{
         width: 125px;
