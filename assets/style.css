@@ -44,12 +44,12 @@ html{
 
 body{
     background-color: var(--background);
-    
+    overflow-x: hidden;
 }
 
 main{
     height: 1400px;
-    background: url("./images/Designer.png")  repeat-y scroll;
+    background: url("./images/Designer.png") scroll;
     background-size: 100% 100%;
 }
 a{
@@ -125,7 +125,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     box-shadow: 10px 10px  40px 10px #000000;
 }
 
@@ -187,10 +187,10 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
 }
+
 .section_menu .menu .item .list li{
-    width: 49%;
+    width: 47%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -305,15 +305,27 @@ nav ul {
 
 
     }
-
+    .section_container .container .menu .item .list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section_container .container .menu .item .list li{
+        width: 100%;
+    }
 }
 
 @media(max-width: 768px){
 
+
 }
 @media(max-width: 480px){
+
+    header{
+        background-color: #ed8a18bb;
+    }
     nav{
         padding: none;
+
     }
     nav .logo a h2{
         font-family: SefidRoud;
@@ -323,12 +335,61 @@ nav ul {
     }
 
     .submit button{
-        font-size: 16px;
+        width: 60%;
+        font-size: 80%;
+        position: fixed;
+        
     }
-    main{
-        height: 1400px;
-        background: linear-gradient(120deg, #ba694e 0%, #83a326 30%, #cac412 50%, #981a11 100%);
-        background-size: 100% 100%;
+    .section_container .menu .item .cat_container .cat {
+        display: none;
+    }
+    .section_container .menu{
+        width: 100%;
+        padding: 0;
+    }
+    .section_container .menu .item{
+        width: 100%;
+        padding: 0;
+    }
+    .section_container .menu .item .list{
+        width: 100%;
+    }
+    /* .section_menu .menu .item .cat_container ul li{
+        display: inline-block;
+    }
+    .section_menu .menu .item .cat_container .cat li h2{
+        font-size: 82%;
+    } */
+    .section_menu .menu .item .list li .text p{
+        font-size: 14px;
+        
     }
 
+    main{
+        background: #f5bd06;
+        height: 1400px;
+        background-size: 100vh 100vh;
+    }
+    .section_menu .section_container .container .menu{
+        position: absolute;
+        background: #f5bd06;
+        background-image: url("./images/design.png") ;
+        background-repeat: no-repeat;
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-position: center center;
+        padding-bottom: 50px ;
+    }
+    /**   quantity item start   **/
+    .quantity-counter{
+        width: 125px;
+    }
+    .quantity-counter input{
+        width: 40px;
+        font-size: 16px;
+    }
+    .quantity-counter span {
+        font-size: 20px;
+    }
 }
